@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+.eslintcache
+/dist
+/node_modules
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+*.iml

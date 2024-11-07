@@ -1,0 +1,39 @@
+{
+  "name": "proven-loader",
+  "version": "0.0.1",
+  "description": "A loader for webpack that allows importing Proven application code",
+  "main": "dist/cjs.js",
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "scripts": {
+    "start": "npm run build -- -w",
+    "build": "cross-env NODE_ENV=production babel src -d dist --copy-files",
+    "lint:prettier": "prettier --list-different .",
+    "lint:js": "eslint --cache .",
+    "lint": "npm-run-all -l -p \"lint:**\""
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.2",
+    "cross-env": "^7.0.3",
+    "loader-utils": "3.3.1",
+    "schema-utils": "4.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.25.9",
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "eslint": "9.14.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "prettier": "3.3.3",
+    "webpack": "5.96.1"
+  }
+}
